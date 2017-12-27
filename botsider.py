@@ -32,7 +32,7 @@ helpMessage ="""-==================-
 KAC=[cl]
 mid = cl.getProfile().mid 
 
-Bots=[mid,Amid,Bmid,Cmid,Dmid]
+Bots=[mid]
 owner=["u7cd68a1bc3cfa0ae3fcdb7907e4d307d"]
 wait = {
     'contact':False,
