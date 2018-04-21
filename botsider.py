@@ -10,8 +10,8 @@ from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
-cl = LINETCR.LINE() #Luffy
-cl.login(token='ISI TOKEN KAMU')
+cl = LINETCR.LINE()
+cl.login(qr=True)
 cl.loginResult()
 
 print "login Bot Ferians Succes"
@@ -24,7 +24,6 @@ helpMessage ="""-==================-
 [•]Cctv [Start Check Sider]
 [•]Ciduk [Liat Hasil Sider]
 [•]Creator [Melihat Creator Bot]
-[•]@bye/Bot out [Untuk Keluarkan Bot]
 -==================-
     By Ferians Bot 
 -==================-
@@ -33,15 +32,17 @@ KAC=[cl]
 mid = cl.getProfile().mid 
 
 Bots=[mid]
-owner=["u7cd68a1bc3cfa0ae3fcdb7907e4d307d"]
+owner=["uf594a0ae86c285337ae3f5a116db1aac"]
 wait = {
     'contact':False,
     'autoJoin':True,
     'autoCancel':{"on":False,"members":1},
     'leaveRoom':False,
     'timeline':False,
-    'autoAdd':False,
-    'message':"""тerima Kasih Sudah Menambahkan Aku Jadi Teman""",
+    'autoAdd':True,
+    'message':"""Thanks For Add Me
+Bot Sider By Inojin
+Contact Me : http://line.me/ti/p/~justferians""",
     "lang":"JP",
     "comment":"Thanks for add me",
     "commentOn":False,
@@ -438,7 +439,7 @@ def bot(op):
                 if msg.from_ in admin:
                   ginfo = cl.getGroup(msg.to)
                   try:
-                    gCreator = ginfo.creator.displayName
+                    g= ginfo.creator.displayName
                   except:
                     gCreator = "Error"
                   if wait["lang"] == "JP":
@@ -640,7 +641,7 @@ def bot(op):
       #-------------Creator------------------#
             elif msg.text in ["Creator"]:
               msg.contentType = 13
-              msg.contentMetadata = {'mid': 'u7cd68a1bc3cfa0ae3fcdb7907e4d307d'}
+              msg.contentMetadata = {'mid': 'uf594a0ae86c285337ae3f5a116db1aac'}
               cl.sendMessage(msg)
               cl.sendText(msg.to,"Itu Kak Creator Bot Kami")
       #-------------Finish----------------#
