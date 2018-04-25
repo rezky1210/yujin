@@ -11,7 +11,7 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
 cl = LINETCR.LINE()
-cl.login(qr=True)
+cl.login(token='ISI TOKEN KAMU')
 cl.loginResult()
 
 print "login Bot Ferians Succes"
@@ -36,9 +36,9 @@ owner=["uf594a0ae86c285337ae3f5a116db1aac"]
 wait = {
     'contact':False,
     'autoJoin':True,
-    'autoCancel':{"on":False,"members":1},
-    'leaveRoom':False,
-    'timeline':False,
+    'autoCancel':{"on":True,"members":20},
+    'leaveRoom':True,
+    'timeline':True,
     'autoAdd':True,
     'message':"""Thanks For Add Me
 Bot Sider By Inojin
